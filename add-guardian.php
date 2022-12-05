@@ -5,7 +5,9 @@ if(isset($_POST['Submit']))
 {	
 if(!empty($_POST['guardian_name'])  && !empty($_POST['guardian_email']) && !empty($_POST['guardian_password']) && !empty($_POST['guardian_mobile']))
 {	
+	
     $pswrd_hash = $_POST['guardian_password'];
+	//new commit
     $hshpswrd=password_hash($pswrd_hash,PASSWORD_DEFAULT);
     $suff = rand(1001,9999);
     $Uname = $_POST['guardian_name'];
